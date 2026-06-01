@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>TechStore</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <style>
+
+        body{
+background:linear-gradient(to right,#dfe9f3,#ffffff);
+}
+
+        .card:hover{
+transform:scale(1.08);
+transition:0.4s;
+}
+        footer{
+            margin-top:50px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
+
+       <a class="navbar-brand" href="#">GadgetWorld</a>
+
+        <button class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- Products -->
+<div class="container mt-5">
+
+    <div class="row">
+
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+
+            <div class="card">
+
+                <img src="data:image/jpeg;base64,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"
+                class="card-img-top">
+
+                <div class="card-body">
+
+                    <h5>Smart Watch</h5>
+
+                    <p>Fitness tracking smartwatch</p>
+
+                    <h6>
+                        ₹8,000
+                        <span class="badge bg-success">
+                            New
+                        </span>
+                    </h6>
+
+                   <button class="btn btn-success">
+View Details
+</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+
+            <div class="card">
+
+                <img src="https://m.media-amazon.com/images/I/718N62+jU7S.jpg"
+                class="card-img-top">
+
+                <div class="card-body">
+
+                    <h5>Tablet</h5>
+
+                    <p>Android Gaming Tab</p>
+
+                    <h6>
+                        ₹30,000
+                        <span class="badge bg-danger">
+                            Sale
+                        </span>
+                    </h6>
+
+                    <button class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#m2">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+
+            <div class="card">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjepmwAUuWEIOpGpqF3hbUT_n8WupYUj30cw&s"
+                class="card-img-top">
+
+                <div class="card-body">
+
+                    <h5>Camera</h5>
+
+                    <p>Professional DSLR Camera</p>
+
+                    <h6>
+                        ₹59,000
+                        <span class="badge bg-success">
+                            New
+                        </span>
+                    </h6>
+
+                    <button class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#m3">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="m1">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5>Laptop Details</h5>
+
+                <button class="btn-close"
+                data-bs-dismiss="modal"></button>
+
+            </div>
+
+            <div class="modal-body">
+                16GB RAM, SSD, Fast performance
+            </div>
+
+            <div class="modal-footer">
+
+                <button class="btn btn-secondary"
+                data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="m2">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5>Mobile Details</h5>
+
+                <button class="btn-close"
+                data-bs-dismiss="modal"></button>
+
+            </div>
+
+            <div class="modal-body">
+                High camera quality smartphone
+            </div>
+
+            <div class="modal-footer">
+
+                <button class="btn btn-secondary"
+                data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="m3">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5>Headphones Details</h5>
+
+                <button class="btn-close"
+                data-bs-dismiss="modal"></button>
+
+            </div>
+
+            <div class="modal-body">
+                Best sound quality with bass
+            </div>
+
+            <div class="modal-footer">
+
+                <button class="btn btn-secondary"
+                data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3">
+
+    <p>
+        © 2026 TechStore | Follow us on social media
+    </p>
+
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
